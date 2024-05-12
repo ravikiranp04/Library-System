@@ -116,7 +116,6 @@ staffApp.put('/renewal_staff/:bookId',expresshandler(async(req,res)=>{
     const Id=(+req.params.bookId);
     const bk= await booksCollection.findOne({bookId:Id});
     const retDate = new Date();
-    bk.dateofBorrow=retDate.toISOString()
     retDate.setDate(retDate.getDate() + 7);
     bk.returnDate = retDate.toISOString();
     bk.renewalCount=0;

@@ -31,8 +31,8 @@ function Signin() {
       },[loginStatus])
     return (
         <div className='container d-flex justify-content-center align-items-center vh-100'>
-            <div className="form-container">
-            {errorMessage && <p className="text-danger">{errorMessage}</p>}
+            <div className="">
+            {errorMessage && <p className="text-danger m-4">{errorMessage}</p>}
 
                 <form onSubmit={handleSubmit(handleFormSubmit)} className='w-50'>
                     <div className="mb-3">

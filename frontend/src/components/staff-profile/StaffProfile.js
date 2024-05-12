@@ -186,7 +186,7 @@ function StaffProfile() {
                           </div>
                           <div className='d-flex justify-content-around'>
                           {
-                        book.renewalCount==0?<button className="btn btn-success" disabled>
+                        book.renewalCount==0?<button className="btn btn-warning" disabled>
                         <span>Renewal Left: {1-book.renewalCount}</span>
                       </button>: <button className="btn btn-danger" disabled>
                         <span>Renewal Left: 0</span>
