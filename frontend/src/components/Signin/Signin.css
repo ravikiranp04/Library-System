@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray background color */
+}
+
+.form-container,
+.image-container {
+    width: 50%; /* Set the width of both containers to 50% */
+    height: 100%; /* Set the height of both containers to 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form-container {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.image-container img {
+    width: 100%; /* Set the width of the image to 100% */
+    height: 100%; /* Set the height of the image to 100% */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.sky-label {
+    font-weight: bold;
+}
+
+.sky-radio {
+    margin-left: 5px;
+}
+
+.sky-btn {
+    margin-top: 15px;
+}

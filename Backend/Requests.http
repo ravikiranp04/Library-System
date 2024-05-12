@@ -1,0 +1,116 @@
+###user registration
+
+post http://localhost:5000/user-api/user
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"ravi_04",
+    "password":"ravi2004",
+    "email":"ravi@gmail.com"
+}
+
+###user login
+
+post http://localhost:5000/user-api/login
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"ravi_04",
+    "password":"ravi2004"
+
+}
+
+###staff registration
+
+post http://localhost:5000/staff-api/user
+Content-Type: application/json
+
+{
+    "userType":"staff",
+    "username":"shiva_04",
+    "password":"shiva",
+    "email":"shiva@gmail.com"
+}
+###staff login
+
+
+post http://localhost:5000/staff-api/login
+Content-Type: application/json
+
+{
+    "userType":"staff",
+    "username":"shiva_04",
+    "password":"shiva"
+}
+###TO ADD A BOOK
+post http://localhost:5000/staff-api/add-book
+Content-Type: application/json
+
+{
+    "bookId":"{{$timestamp}}",
+    "title":"React Tech",
+    "author":"Krishna",
+    "subject":"Web Development",
+    "borrowStatus":false,
+    "dateofBorrow":"",
+    "returnDate":"",
+    "username":"",
+    "previousHistory":[],
+    "renewalCount": 0,
+    "status":true
+}
+###TO Remove a book by id
+put http://localhost:5000/staff-api/removeBookById/1711097892
+Content-Type: application/json
+
+{
+    "bookId":"1711097892",
+    "title":"Fundamentls of Python",
+    "author":"Sathya",
+    "subject":"programming",
+    "borrowStatus":false,
+    "dateofBorrow":"",
+    "returnDate":"",
+    "username":"",
+    "previousHistory":[],
+    "renewalCount": 0,
+    "status":false
+}
+
+
+###TO add a category
+Post http://localhost:5000/staff-api/addCategory
+Content-Type: application/json
+
+{
+    "title":"React Tech",
+    "author":"Krishna",
+    "subject":"Web Development",
+    "availableCount":20
+}
+
+
+###Borrow A Book
+put http://localhost:5000/staff-api/borrow/1715453459032/tarun_04
+
+### Apply of a renewel(single time)
+put http://localhost:5000/staff-api/renewal_staff/1715352109
+
+### return (single time)
+put http://localhost:5000/staff-api/return/1715453459032
+
+### Display Borrowed books
+Get http://localhost:5000/staff-api/display_books
+
+//-------------------------------USER OPERATIONS-----------------------------------------
+
+### Apply of a renewel(single time)
+put http://localhost:5000/user-api/renewal_user/1715450254337
+
+###Display Borrowed Books
+Get http://localhost:5000/user-api/display_borrow/ravi_04
+
+###Display Previous Borrowed Books
+Get http://localhost:5000/user-api/display_borrow_prev/ravi_04

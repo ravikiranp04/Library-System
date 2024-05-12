@@ -1,0 +1,26 @@
+.library-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.library-header {
+    color: #333;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.card-title {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+}
